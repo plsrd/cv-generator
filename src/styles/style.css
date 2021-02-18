@@ -1,0 +1,14 @@
+label {
+  display: none;
+}
+
+button {
+  display:block;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+.empty {
+  border: 2px solid red;
+}
