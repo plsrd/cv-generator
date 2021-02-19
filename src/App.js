@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ContactInfo from './components/ContactInfo'
+import reset from './styles/reset.css'
 import style from './styles/style.css'
 
 function App() {
@@ -7,8 +8,9 @@ function App() {
 
   
   return (
-    <div>
+    <div className='app'>
       <ContactInfo />
+      
     </div>
   )
 }

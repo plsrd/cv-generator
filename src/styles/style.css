@@ -1,14 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 label {
   display: none;
 }
 
-button {
-  display:block;
-  outline: none;
-  background-color: transparent;
-  border: none;
+.empty {
+  border: 1px solid red
 }
 
-.empty {
-  border: 2px solid red;
+.app {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 80vw;
+  height: 80vh;
+  margin-top: 3em;
+}
+
+.contact-info {
+  margin: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.contact-input {
+  font-family: 'IBM Plex Mono', monospace;
+  border: none;
+  margin: .5em;
+  font-size: 1em;
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.name {
+  font-size: 2em;
+}
+
+.occupation {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
 }
