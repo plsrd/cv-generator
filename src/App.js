@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+
+import React from 'react'
 import ContactInfo from './components/ContactInfo'
+// eslint-disable-next-line no-unused-vars
 import reset from './styles/reset.css'
-import style from './styles/style.css'
+
+
+import Skills from './components/Skills'
 
 function App() {
  
@@ -10,7 +14,7 @@ function App() {
   return (
     <div className='app'>
       <ContactInfo />
-      
+      <Skills />
     </div>
   )
 }

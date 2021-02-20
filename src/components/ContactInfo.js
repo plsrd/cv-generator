@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import EditableInput from './EditableInput'
+// eslint-disable-next-line no-unused-vars
+import style from '../styles/contactInfo.css'
 
 function ContactInfo() {
   const [ firstName, setFirstName ] = useState('First Name')
@@ -58,7 +60,7 @@ function ContactInfo() {
           className='address'
         />
         <EditableInput 
-          label='Phone'
+          label='Phone No.'
           name='phone'
           value={phone}
           updateState={setPhone}

@@ -1,18 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 
+
 function EditableInput(props) {
   const [ editing, setEditing ] = useState(false)
   const node = useRef();
-
-  const handleClickOutside = e  => {
-    if (node.current.contains(e.target)) {
-      //click inside
-      return
-    } 
-
-    setEditing(false)
-  }
-
 
   const {
     name,
@@ -22,6 +13,17 @@ function EditableInput(props) {
     className
   } = props
 
+
+  const handleClickOutside = e  => {
+    if (node.current.contains(e.target)) {
+      return
+    } 
+    if (value === '') { 
+      updateState(label)
+      setEditing(false) 
+    }
+  }
+
   const handleChange = (e) => {
     const { value } = e.target
     updateState(value)
@@ -29,8 +31,11 @@ function EditableInput(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setEditing(false)
+  }
 
+  const handleClick = () => {
+    setEditing(true)
+    updateState('')
   }
   useEffect(() => {
     if (editing) {
@@ -42,11 +47,11 @@ function EditableInput(props) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [editing]);
+  }, [ editing ]);
 
   if(editing === true) {
     return (
-      <div onSubmit={handleSubmit} ref={node}>
+      <form onSubmit={handleSubmit} ref={node}>
         <label> {label} </label>
         <input
           name={name} 
@@ -55,13 +60,14 @@ function EditableInput(props) {
           placeholder={label}
           className= {`${className}-input`}
         />
-      </div>
+        <button>{(editing === true && value !== '') ? 'Update' : '+'}</button>
+      </form>
     )
   } else {
     return <p 
-              onClick= {() => setEditing(true)}
+              onClick= {handleClick}
               className={className}
-            > {value}</p>
+            >{value}</p>
   }
 
 }

@@ -25,9 +25,21 @@ label {
 }
 
 .contact-info {
-  margin: 4em;
+  margin: 4em 4em 0em 4em;
+  padding-bottom: 2em;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.contact-info button {
+  display: none;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -43,6 +55,7 @@ label {
   display: flex;
   flex-direction: column;
   text-align: end;
+  justify-content: space-around;
 }
 
 ::placeholder {
