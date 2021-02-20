@@ -1,15 +1,63 @@
-.skills-container {
+.skills-section {
   margin: 2em 4em;
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  flex-basis: 1;
+  border-bottom: 1px solid black;
+  padding-bottom: 2em;
 }
 
-.skills-container h2 {
+.skills-section h2 {
   font-size: 1.5em;
   font-weight: bold;
 }
 
+.skills-section button {
+  color:#265d77;
+  background-color: #b7e4f8;
+  border: none;
+  padding: .5em 1em .6em 1em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 1em;
+  margin: .5em 0 0 1em;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+.header {
+  flex-grow: 1;
+}
+
+.header input {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  width: 175px;
+  margin-top: .5em;
+  border: 1px solid #6fc8f1;
+  border-radius: .5em;
+  padding: .5em;
+}
+
 .hidden {
   display: none;
+}
+
+.skills-container {
+  width: 500px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.skill {
+  background-color: #6fc8f1;
+  padding: 1em;
+  border-radius: 1em;
+  margin: .5em;
+}
+
+.skill:first-of-type {
+  margin-left: 0;
 }

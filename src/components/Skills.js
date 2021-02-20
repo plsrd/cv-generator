@@ -9,7 +9,10 @@ function Skills() {
   const [ editing, setEditing] = useState(false)
   const [ addSkill, setAddSkill ] = useState('') 
 
-  const allSkills = skills.map(skill => <p key={uniqid()} className='skill'>{skill}</p>)
+  const allSkills = skills.map(skill => <p 
+                                          key={uniqid()} 
+                                          className='skill'
+                                          >{skill}</p>)
 
   const handleClick = () => {
     setEditing(true)
@@ -20,7 +23,7 @@ function Skills() {
   }
 
   return (
-    <div className='skills-container'>
+    <div className='skills-section'>
       <div className='header'>
         <h2>Skills</h2>
         { editing ? <SkillInput
@@ -34,7 +37,7 @@ function Skills() {
                           updateSkills={updateSkills}
                           /> : <button onClick={handleClick}>+</button>}
       </div>
-      <div>
+      <div className='skills-container'>
         {allSkills}
       </div>
     </div>
