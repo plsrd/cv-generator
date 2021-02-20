@@ -3,7 +3,7 @@ import EditableInput from './EditableInput'
 // eslint-disable-next-line no-unused-vars
 import style from '../styles/contactInfo.css'
 
-function ContactInfo() {
+const ContactInfo= () => {
   const [ firstName, setFirstName ] = useState('First Name')
   const [ lastName, setLastName ] = useState('Last Name')
   const [ occupation, setOccupation ] = useState('Occupation')

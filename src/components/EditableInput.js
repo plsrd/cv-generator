@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 
-function EditableInput(props) {
+const EditableInput = (props) => {
   const [ editing, setEditing ] = useState(false)
   const node = useRef();
 
@@ -22,6 +22,7 @@ function EditableInput(props) {
       updateState(label)
       setEditing(false) 
     }
+
   }
 
   const handleChange = (e) => {
@@ -31,6 +32,7 @@ function EditableInput(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setEditing(false)
   }
 
   const handleClick = () => {
@@ -60,7 +62,7 @@ function EditableInput(props) {
           placeholder={label}
           className= {`${className}-input`}
         />
-        <button>{(editing === true && value !== '') ? 'Update' : '+'}</button>
+        <button>Add</button>
       </form>
     )
   } else {

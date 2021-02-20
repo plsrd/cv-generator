@@ -6,7 +6,7 @@ body {
   align-items: center;
 }
 
-label {
+.contact-info, .skill-section label {
   display: none;
 }
 

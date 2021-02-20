@@ -1,6 +1,9 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
+import SkillForm from './SkillForm'
+import WorkForm from './WorkForm'
 
-function SkillInput(props) {
+
+const Input = (props) => {
   const {
     name,
     label,
@@ -9,7 +12,8 @@ function SkillInput(props) {
     className,
     editing,
     setEditing,
-    updateSkills
+    updateItems,
+    setItemToAdd
   } = props
 
   const node = useRef();
@@ -33,6 +37,13 @@ function SkillInput(props) {
     updateState('')
   }
 
+  const handleWorkForm = (object) => {
+    console.log(object)
+    setEditing(false)
+    setItemToAdd(object)
+    updateItems()
+  }
+
   useEffect(() => {
     if (editing) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -44,19 +55,32 @@ function SkillInput(props) {
     };
   }, [ editing ])
 
-  return (
-    <form onSubmit={handleSubmit} ref={node}>
-      <label>{label}</label>
-      <input 
-        name={name} 
+
+  if (name === 'addSkill') {
+    return (
+      <SkillForm 
+        handleSubmit={handleSubmit}
+        name={name}
+        node={node}
+        label={label}
         value={value}
-        onChange={handleChange}
-        placeholder={label}
-        className= {`${className}-input`}
+        handleChange={handleChange}
+        className={className}
+        updateItems={updateItems}
       />
-      <button className='hidden' onClick={updateSkills}>B</button>
-    </form>
-  )
+    )
+  } else if (name === 'addWork') {
+    return (
+      <div>
+      <WorkForm 
+        node={node}
+        className={className}
+        handleWorkForm={handleWorkForm}
+      />
+      </div>
+    )
+  }
+
 }
 
-export default SkillInput
+export default Input

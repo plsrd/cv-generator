@@ -1,0 +1,26 @@
+
+input {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  width: 175px;
+  margin-top: .5em;
+  border: 1px solid #6fc8f1;
+  border-radius: .5em;
+  padding: .5em;
+}
+
+.header-text {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header-button, button {
+  color:#265d77;
+  background-color: #b7e4f8;
+  border: none;
+  padding: .5em 1em .6em 1em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 1em;
+  margin: .5em 0 0 1em;
+}
