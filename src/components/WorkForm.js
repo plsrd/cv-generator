@@ -1,38 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
+
 
 const WorkForm = (props) => {
-  const [ experience, setExperience ] = useState({
-    organization: '',
-    position: '',
-    from: '',
-    to: '',
-    description: '',
-  })
+
 
   const {
     node,
-    className,
-    handleWorkForm
+    experience,
+    handleChange,
+    handleSubmit
   } = props
 
-  const handleChange = (e) => {
-    const { value, name } = e.target
-    setExperience({...experience, [name]: value})
-  }
-
-  const handleSubmit = () => {
-    handleWorkForm(experience)
-  }
 
   return (
-    <form onSubmit={handleSubmit} ref={node}>
+    <form  onSubmit={handleSubmit} ref={node}>
       <label>Organization</label>
       <input 
         name='organization' 
         value={experience.organization}
         onChange={handleChange}
         placeholder={'Organization'}
-        className= {`${className}-input`}
+        className='work-input'
       />
       <label>Postition</label>
       <input 
@@ -40,7 +28,7 @@ const WorkForm = (props) => {
         value={experience.position}
         onChange={handleChange}
         placeholder={'Position'}
-        className= {`${className}-input`}
+        className='work-input'
       />
       <div className='date-container'>
         <label>From</label>
@@ -49,7 +37,7 @@ const WorkForm = (props) => {
           name='from'
           value={experience.from}
           onChange={handleChange}
-          className= {`${className}-input`}
+          className='work-input'
         />
         <label>To</label>
         <input 
@@ -57,7 +45,7 @@ const WorkForm = (props) => {
           name='to'
           value={experience.to}
           onChange={handleChange}
-          className= {`${className}-input`}
+          className='work-input'
         />
       </div>
       <label>Description</label>
@@ -65,7 +53,7 @@ const WorkForm = (props) => {
           name='description'
           value={experience.description}
           onChange={handleChange}
-          className= {`${className}-input`}
+          className='work-input'
         />
       <button type='submit'>Create</button>
     </form>

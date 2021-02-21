@@ -1,8 +1,13 @@
-.work-experience-container {
+.work-container {
   margin: 0 4em;
   display: flex;
   flex-direction: row;
   flex-basis: 1;
   border-bottom: 1px solid black;
   padding-bottom: 2em;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
 }
