@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import uniqid from 'uniqid'
 // eslint-disable-next-line no-unused-vars
 import style from '../styles/skills.css'
@@ -20,6 +20,24 @@ const InfoSection = (props) => {
                                         key={uniqid()} 
                                         className={context}
                                       >{item}</li>)
+
+  const node = useRef();
+  const handleClickOutside = e  => {
+    if (node.current.contains(e.target)) {
+      return
+    } 
+    setEditing(false)
+  }
+  useEffect(() => {
+    if (editing) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ editing ])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -51,6 +69,7 @@ const InfoSection = (props) => {
                       value={skillInput}
                       handleChange={handleChange}
                       className={`skill-input`}
+                      node={node}
                     /> : <button onClick={handleClick} className='header-button'>+</button>}
       </div>
       <ul className={`${context}-container`}>

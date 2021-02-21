@@ -8,8 +8,6 @@ const SkillForm= (props) => {
     label,
     value,
     handleChange,
-    className,
-    updateItems
   } = props
 
   return (
@@ -23,7 +21,6 @@ const SkillForm= (props) => {
         value={value}
         onChange={handleChange}
         placeholder={label}
-        className= {`${className}-input`}
       />
       <button 
         className='hidden' 
