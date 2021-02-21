@@ -27,7 +27,6 @@ const SkillForm= (props) => {
       />
       <button 
         className='hidden' 
-        onClick={updateItems}
       ></button>
     </form>
   )
