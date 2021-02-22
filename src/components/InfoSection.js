@@ -30,10 +30,17 @@ const InfoSection = (props) => {
 
   const title = context.charAt(0).toUpperCase() + context.slice(1)
 
+  const handleSkillClick = (e) => {
+    const content = e.target.innerText
+    console.log(content)
+    const newSkills = skills.filter(skill => skill !== content)
+    setSkills(newSkills)
+  }
 
   const allSkills = skills.map(skill => <li 
                                         key={uniqid()} 
                                         className={context}
+                                        onClick={handleSkillClick}
                                       >{skill}</li>)
 
   const allWork = experiences.map(experience => {return (
@@ -45,15 +52,15 @@ const InfoSection = (props) => {
                                                   <p className='position'>{experience.position}</p>
                                                   <div className='timing'>
                                                     <div>
-                                                      <Moment format='MM-YYYY'>{experience.from}</Moment>
+                                                      <Moment format='MMMM YYYY'>{experience.from}</Moment>
                                                     </div>
+                                                    <p>--</p>
                                                     <div>
-                                                      <Moment format='MM-YYYY'>{experience.to}</Moment>
+                                                      <Moment format='MMMM YYYY'>{experience.to}</Moment>
                                                     </div>
                                                   </div>
-                                                  <p className='description'>{experience.description}</p>
+                                                  <p>{experience.description}</p>
                                                 </div>)})                                   
-  
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -160,7 +167,6 @@ const InfoSection = (props) => {
         {editing ? null : <button onClick={handleClick} className='header-button'>+</button>}
       </div>
       {selectList()}
-      {console.log(experiences)}
     </div>
   )
 }

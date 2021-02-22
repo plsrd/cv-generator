@@ -13,7 +13,7 @@ const WorkForm = (props) => {
 
 
   return (
-    <form  onSubmit={handleSubmit} ref={node}>
+    <form  onSubmit={handleSubmit} ref={node} className='work-form'>
       <label>Organization</label>
       <input 
         name='organization' 
@@ -21,6 +21,7 @@ const WorkForm = (props) => {
         onChange={handleChange}
         placeholder={'Organization'}
         className='work-input'
+        required
       />
       <label>Postition</label>
       <input 
@@ -29,31 +30,38 @@ const WorkForm = (props) => {
         onChange={handleChange}
         placeholder={'Position'}
         className='work-input'
+        required
       />
       <div className='date-container'>
-        <label>From</label>
-        <input 
-          type='date'
-          name='from'
-          value={experience.from}
-          onChange={handleChange}
-          className='work-input'
-        />
-        <label>To</label>
-        <input 
-          type='date'
-          name='to'
-          value={experience.to}
-          onChange={handleChange}
-          className='work-input'
-        />
+        <div>
+          <label>From</label>
+          <input 
+            type='date'
+            name='from'
+            value={experience.from}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label>To</label>
+          <input 
+            type='date'
+            name='to'
+            value={experience.to}
+            onChange={handleChange}
+            required
+          />
+        </div>
       </div>
       <label>Description</label>
         <textarea
           name='description'
           value={experience.description}
           onChange={handleChange}
-          className='work-input'
+          className='work-input description'
+          rows={5}
+          required
         />
       <button type='submit'>Create</button>
     </form>

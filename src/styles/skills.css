@@ -1,12 +1,19 @@
-.skills-section {
+.skill-section {
   margin: 2em 4em;
   display: flex;
   flex-direction: row;
-  flex-basis: 1;
   border-bottom: 1px solid black;
   padding-bottom: 2em;
 }
 
+.skill-section .header {
+  flex-grow: 1;
+  flex-basis: 225px;
+}
+
+.skill-section input {
+  width: 200px;
+}
 
 ::placeholder {
   font-style: italic;
@@ -17,18 +24,28 @@
   display: none;
 }
 
-.skills-container {
+.skill-container {
   width: 500px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
+  flex-grow: 2;
 }
 
 .skill {
-  background-color: #6fc8f1;
-  padding: 1em;
+  background-color: #b7e4f8;
+  color: #265d77;
+  font-weight: bold;
   border-radius: 1em;
   margin: .5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skill:hover {
+  background-color: #b1bbc0;
 }
 
 .skill:first-of-type {

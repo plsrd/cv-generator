@@ -20,7 +20,8 @@ const SkillForm= (props) => {
         name={name} 
         value={value}
         onChange={handleChange}
-        placeholder={label}
+        placeholder='something useful...'
+        maxLength='30'
       />
       <button 
         className='hidden' 

@@ -15,6 +15,7 @@ input {
 }
 
 .header-button, button {
+  font-family: 'IBM Plex Mono', monospace;
   color:#265d77;
   background-color: #b7e4f8;
   border: none;
