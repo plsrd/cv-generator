@@ -23,9 +23,7 @@ const SkillForm= (props) => {
         placeholder='something useful...'
         maxLength='30'
       />
-      <button 
-        className='hidden' 
-      ></button>
+      <button type='submit'>Create</button>
     </form>
   )
 }

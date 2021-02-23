@@ -11,24 +11,32 @@ const WorkForm = (props) => {
     handleSubmit
   } = props
 
+  const { 
+    organization, 
+    position, 
+    from, 
+    to, 
+    description 
+  } = experience
+
 
   return (
     <form  onSubmit={handleSubmit} ref={node} className='work-form'>
       <label>Organization</label>
       <input 
         name='organization' 
-        value={experience.organization}
+        value={organization}
         onChange={handleChange}
-        placeholder={'Organization'}
+        placeholder='Organization'
         className='work-input'
         required
       />
       <label>Postition</label>
       <input 
         name='position' 
-        value={experience.position}
+        value={position}
         onChange={handleChange}
-        placeholder={'Position'}
+        placeholder='Position'
         className='work-input'
         required
       />
@@ -38,7 +46,7 @@ const WorkForm = (props) => {
           <input 
             type='date'
             name='from'
-            value={experience.from}
+            value={from}
             onChange={handleChange}
             required
           />
@@ -48,7 +56,7 @@ const WorkForm = (props) => {
           <input 
             type='date'
             name='to'
-            value={experience.to}
+            value={to}
             onChange={handleChange}
             required
           />
@@ -57,7 +65,7 @@ const WorkForm = (props) => {
       <label>Description</label>
         <textarea
           name='description'
-          value={experience.description}
+          value={description}
           onChange={handleChange}
           className='work-input description'
           rows={5}

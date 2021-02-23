@@ -16,6 +16,7 @@ const App = () => {
       <ContactInfo />
       <InfoSection context='skill' />
       <InfoSection context='work' />
+      <InfoSection context='reference' />
     </div>
   )
 }

@@ -48,13 +48,17 @@
 
 .organization {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  margin: .9em 0;
 }
 
 .position {
   font-style: italic;
+  font-size: 1.1em;
 }
 
 .timing {
   display: flex;
+  font-size: .9em;
+  margin: .8em 0;
 }
