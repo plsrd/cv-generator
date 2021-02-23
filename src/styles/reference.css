@@ -17,6 +17,32 @@
   border-radius: 1em;
 }
 
+.reference-form label {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.reference-form button {
+  margin-left: 0;
+}
+
+.reference-form input {
+  width: 205px;
+}
+
 .reference-container {
   padding: 1em 3em;
+}
+
+.reference-name {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.reference-email {
+  font-style: italic;
+  margin: .5em 0;
+}
+
+.reference {
+  margin: 1em 0;
 }

@@ -12,7 +12,7 @@ const Reference = (props) => {
     <div className='reference'>
       <h3 className='reference-name'>{name} - {relationship}</h3>
       <div>
-        <p>{email}</p>
+        <p className='reference-email'>{email}</p>
         <p>{phone}</p>
       </div>
     </div>

@@ -9,6 +9,13 @@ input {
   padding: .5em;
 }
 
+body {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header-text {
   font-size: 1.5em;
   font-weight: bold;
@@ -22,6 +29,26 @@ input {
   padding: .5em 1em .6em 1em;
   font-size: 1em;
   font-weight: bold;
-  border-radius: 1em;
+  border-radius: .5em;
   margin: 1em 0 0 1em;
+}
+
+.header-button:hover {
+  color: #b7e4f8;
+  background-color: #265d77;
+}
+
+.app {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 100vh;
+  overflow: auto;
+}
+
+.empty {
+  border: 1px solid red
 }
