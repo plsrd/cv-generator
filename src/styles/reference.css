@@ -1,0 +1,22 @@
+.reference-section {
+  margin: 0 4em 2em 4em;
+  display: flex;
+  flex-direction: row;
+}
+
+.reference-section .header {
+  flex-basis: 240px;
+}
+
+.reference-form {
+  margin: 1em 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 1em;
+}
+
+.reference-container {
+  padding: 1em 3em;
+}

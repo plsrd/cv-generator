@@ -4,10 +4,13 @@ import uniqid from 'uniqid'
 import style from '../styles/skills.css'
 // eslint-disable-next-line no-unused-vars
 import work from '../styles/workExperience.css'
+// eslint-disable-next-line no-unused-vars
+import reference from '../styles/reference.css'
 import SkillForm from './SkillForm'
 import WorkForm from './WorkForm'
 import Work from './Work'
 import ReferenceForm from './ReferenceForm'
+import Reference from './Reference'
 
 
 const InfoSection = (props) => {
@@ -63,6 +66,8 @@ const InfoSection = (props) => {
                                       >{skill}</li>)
 
   const allWork = experiences.map(experience => <Work data={experience} />)
+
+  const allReferences = references.map(reference => <Reference data={reference} />)
                                      
 
   const handleSubmit = (e) => {
@@ -178,9 +183,11 @@ const InfoSection = (props) => {
         </div>
       )
     } else {
-      <div className='reference-container'>
-
-      </div>
+      return (
+        <div className='reference-container'>
+          {allReferences}
+        </div>
+      )
     }
   }
 

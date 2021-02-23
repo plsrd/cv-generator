@@ -1,16 +1,11 @@
 import React from 'react'
-import uniqid from 'uniqid'
 import Moment from 'react-moment'
 
 const Work = (props) => {
-  const { data } = props
-  const { organization, position, from, to, description } = data
+  const { organization, position, from, to, description } = props.data
 
   return (
-    <div 
-      key={uniqid()} 
-      className='work'
-    >
+    <div className='work'>
       <h3 className='organization'>{organization}</h3>
       <p className='position'>{position}</p>
       <div className='timing'>
@@ -24,9 +19,6 @@ const Work = (props) => {
       </div>
       <p>{description}</p>
     </div>)
-
-
-
 }
 
 export default Work

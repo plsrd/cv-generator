@@ -16,7 +16,7 @@ const ReferenceForm = (props) => {
   } = reference
 
   return (
-    <form onSubmit={handleSubmit} ref={node}>
+    <form onSubmit={handleSubmit} ref={node} className='reference-form'>
       <label>Name</label>
       <input 
         name='name'
@@ -49,7 +49,7 @@ const ReferenceForm = (props) => {
         placeholder='Phone'
         required
       />
-
+      <button type='submit'>Create</button>
     </form>
   )
 }
