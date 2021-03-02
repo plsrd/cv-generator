@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Work from './Work'
 import WorkForm from './WorkForm'
+import uniqid from 'uniqid'
 
 import '../styles/workExperience.css'
 
@@ -15,14 +16,16 @@ const WorkSection = (props) => {
     from: '',
     to: '',
     description: '',
+    id: uniqid()
   })
 
   const allWork = experiences.map(experience => 
-    <Work data={experience} />)
+    <Work data={experience} key={experience.id}/>)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setEditing(false)
+    console.log(experience)
     setExperiences([...experiences, experience])
       setExperience({
         organization: '',
@@ -30,6 +33,7 @@ const WorkSection = (props) => {
         from: '',
         to: '',
         description: '',
+        id: uniqid()
       })
   }
 
