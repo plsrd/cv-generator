@@ -15,6 +15,7 @@ const SkillForm= (props) => {
       onSubmit={handleSubmit} 
       ref={node}
     >
+      <button type='submit'>X</button>
       <label>{label}</label>
       <input 
         name={name} 

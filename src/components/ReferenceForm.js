@@ -2,7 +2,6 @@ import React from 'react'
 
 const ReferenceForm = (props) => {
   const {
-    node, 
     reference,
     handleChange,
     handleSubmit
@@ -16,7 +15,7 @@ const ReferenceForm = (props) => {
   } = reference
 
   return (
-    <form onSubmit={handleSubmit} ref={node} className='reference-form'>
+    <form onSubmit={handleSubmit} className='reference-form'>
       <label>Name</label>
       <input 
         name='name'

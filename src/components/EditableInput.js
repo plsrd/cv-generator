@@ -10,16 +10,18 @@ const EditableInput = (props) => {
     label,
     value,
     handleChange,
-    className
+    className,
+    preview
   } = props
 
-
-
   const handleClick = () => {
-    setEditing(true) 
+    if (preview === false) {
+      setEditing(true) 
+    }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     setEditing(false)
   }
 
@@ -46,10 +48,9 @@ const EditableInput = (props) => {
     return result.charAt(0).toUpperCase() + result.slice(1);  
   }
 
-
-  if(editing === true) {
+  if(editing === true && preview === false) {
     return (
-      <div ref={node}>
+      <form onSubmit={handleSubmit} ref={node}>
         <label> {label} </label>
         <input
           name={name} 
@@ -58,8 +59,8 @@ const EditableInput = (props) => {
           placeholder={label}
           className= {`${className}-input`}
         />
-        <button onClick={handleSubmit}>Add</button>
-      </div>
+        <button>Add</button>
+      </form>
     )
   } else {
     return <p onClick={handleClick} className={className}>{value === '' ? getName() : value}</p>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import EditableInput from './EditableInput'
 // eslint-disable-next-line no-unused-vars
-import style from '../styles/contactInfo.css'
+import '../styles/contactInfo.css'
 
 const ContactInfo= (props) => {
   const { preview } = props
@@ -15,7 +15,6 @@ const ContactInfo= (props) => {
     street: '',
     cityState: '',
   })
-
 
   const handleChange = (e) => {
     const { value, name } = e.target
@@ -31,13 +30,15 @@ const ContactInfo= (props) => {
             value={contactInfo.firstName}
             handleChange={handleChange}
             className='name'
+            preview={preview}
           />
         <EditableInput 
           label='Last Name'
-          name='lastName'
+          name='lastName'ß
           value={contactInfo.lastName}
           handleChange={handleChange}
           className='name'
+          preview={preview}
         />
         <EditableInput 
           label='Occupation'
@@ -45,6 +46,7 @@ const ContactInfo= (props) => {
           value={contactInfo.occupation}
           handleChange={handleChange}
           className='occupation'
+          preview={preview}
         />
       </div>
       <div className='address-container'>
@@ -54,6 +56,7 @@ const ContactInfo= (props) => {
             value={contactInfo.street}
             handleChange={handleChange}
             className='address'
+            preview={preview}
           />
           <EditableInput 
             label='City/State'
@@ -61,6 +64,7 @@ const ContactInfo= (props) => {
             value={contactInfo.cityState}
             handleChange={handleChange}
             className='address'
+            preview={preview}
           />
           <EditableInput 
             label='Email'
@@ -68,6 +72,7 @@ const ContactInfo= (props) => {
             value={contactInfo.email}
             handleChange={handleChange}
             className='address'
+            preview={preview}
           />
           <EditableInput 
             label='Phone No.'
@@ -75,6 +80,7 @@ const ContactInfo= (props) => {
             value={contactInfo.phone}
             handleChange={handleChange}
             className='address'
+            preview={preview}
           />
         </div>
     </div>
