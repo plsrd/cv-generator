@@ -19,13 +19,9 @@ const WorkSection = (props) => {
     id: uniqid()
   })
 
-  const allWork = experiences.map(experience => 
-    <Work data={experience} key={experience.id}/>)
-
   const handleSubmit = (e) => {
     e.preventDefault()
     setEditing(false)
-    console.log(experience)
     setExperiences([...experiences, experience])
       setExperience({
         organization: '',
@@ -45,6 +41,15 @@ const WorkSection = (props) => {
   const handleClick = () =>  {
     setEditing(true)
   }
+
+  const allWork = experiences.map(experience => 
+    <Work 
+      experience={experience} 
+      key={experience.id} 
+      experiences={experiences} 
+      setExperiences={setExperiences}
+      />
+  )
   
   if (preview === false ){
     return (
