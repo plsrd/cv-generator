@@ -16,13 +16,14 @@ const ReferenceSection = (props) => {
     name: '',
     relationship: '',
     email: '',
-    phone: ''
+    phone: '',
+    id: uniqid()
   }) 
 
   const allReferences = references.map(reference => 
     <Reference 
       reference={reference} 
-      key={uniqid()}
+      key={reference.id}
       references={references}
       setReferences={setReferences}
       preview={preview}
@@ -36,7 +37,9 @@ const ReferenceSection = (props) => {
     setReference({name: '',
       relationship: '',
       email: '',
-      phone: ''})
+      phone: '',
+      id: uniqid()
+    })
   }
 
   const handleChange = (e) => {
