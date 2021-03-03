@@ -15,11 +15,6 @@
   width: 200px;
 }
 
-::placeholder {
-  font-style: italic;
-}
-
-
 .hidden {
   display: none;
 }

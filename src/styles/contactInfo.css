@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-
-.contact-info, .skill-section label {
+.contact-info label {
   display: none;
 }
 
+.contact-info input {
+  font-family: 'IBM Plex Mono', monospace;
+  font-style: italic;
+  border: none;
+  outline: 2px solid #b7e4f8;
+}
+
+.contact-info form {
+  display: flex;
+  flex-direction: row;
+}
+
 .contact-info {
+  height: 120px;
   margin: 4em 4em 0em 4em;
   padding-bottom: 2em;
   display: flex;
@@ -14,22 +25,39 @@
   border-bottom: 1px solid black;
 }
 
-.contact-info button {
-  display: none;
-}
-
 .name-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.name-input {
+  height: 30px;
+  width: 200px;
+  font-size: 2em;
+  margin: 0 .5em 0 0;
+}
+
+.name {
+  font-size: 2em;
+}
+
+.name-container button {
+  align-self: center;
+  height: 22px;
+}
+
+.occupation-input {
+  height: 22px;
+  font-size: 1.5em;
+  margin: 0 .5em 0 0;
 }
 
 
-.contact-input {
-  font-family: 'IBM Plex Mono', monospace;
-  border: none;
-  margin: .5em;
-  font-size: 1em;
+.occupation {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .address-container {
@@ -39,17 +67,11 @@
   justify-content: space-around;
 }
 
-::placeholder {
-  color: black;
-  opacity: 1;
+.address-input {
+  height: 14px;
+  font-size: 1em;
+  text-align: end;
+  width: 300px;
+  margin-left: .5em;
 }
 
-.name {
-  font-size: 2em;
-}
-
-.occupation {
-  font-size: 1.5em;
-  font-weight: bold;
-  font-style: italic;
-}

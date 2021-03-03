@@ -50,8 +50,9 @@ const EditableInput = (props) => {
 
   if(editing === true && preview === false) {
     return (
-      <form onSubmit={handleSubmit} ref={node}>
+      <form onSubmit={handleSubmit} ref={node} className='name-form'>
         <label> {label} </label>
+        {className === 'address' ? <button>+</button> : null}
         <input
           name={name} 
           value={value}
@@ -59,7 +60,7 @@ const EditableInput = (props) => {
           placeholder={label}
           className= {`${className}-input`}
         />
-        <button>Add</button>
+        {className !== 'address' ? <button>+</button> : null}
       </form>
     )
   } else {
