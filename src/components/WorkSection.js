@@ -22,7 +22,8 @@ const WorkSection = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setEditing(false)
-    setExperiences([...experiences, experience])
+    if(e.target.textContent !== 'X') {
+      setExperiences([...experiences, experience])
       setExperience({
         organization: '',
         position: '',
@@ -31,6 +32,7 @@ const WorkSection = (props) => {
         description: '',
         id: uniqid()
       })
+    }
   }
 
   const handleChange = (e) => {

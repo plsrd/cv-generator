@@ -53,7 +53,7 @@ const ReferenceSection = (props) => {
 
   if (preview === false ) {
     return (
-      <div className='Reference Section'>
+      <div className='reference-section'>
         <div className='header'>
           <h2 className='header-text'>References</h2>
           { editing ?  <ReferenceForm

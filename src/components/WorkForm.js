@@ -22,6 +22,7 @@ const WorkForm = (props) => {
 
   return (
     <form  onSubmit={handleSubmit} ref={node} className='work-form'>
+      <button onClick={handleSubmit}>X</button>
       <label>Organization</label>
       <input 
         name='organization' 

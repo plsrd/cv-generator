@@ -1,9 +1,6 @@
 
 input {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1em;
-  width: 175px;
-  margin-top: .5em;
   border: 1px solid #6fc8f1;
   border-radius: .5em;
   padding: .5em;
@@ -21,7 +18,7 @@ body {
   font-weight: bold;
 }
 
-.header-button, button {
+.header-button {
   font-family: 'IBM Plex Mono', monospace;
   color:#265d77;
   background-color: #b7e4f8;

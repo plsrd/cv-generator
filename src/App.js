@@ -17,12 +17,12 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className='app'>
       <ContactInfo preview={preview}/>
       <SkillSection preview={preview}/>
       <WorkSection preview={preview} />
       <ReferenceSection preview={preview} />
-      <button onClick={handleClick}>{preview ? 'Edit' : 'Preview'}</button>
+      <button onClick={handleClick} className='header-button'>{preview ? 'Edit' : 'Preview'}</button>
     </div>
   )
 }
