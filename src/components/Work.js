@@ -3,7 +3,7 @@ import Moment from 'react-moment'
 
 
 const Work = (props) => {
-  const { experiences, setExperiences, experience } = props
+  const { experiences, setExperiences, experience, preview } = props
   const { organization, position, from, to, description } = experience
 
   const [ editing, setEditing ] = useState({
@@ -52,7 +52,7 @@ const Work = (props) => {
 
   const handleClick = (e) => {
     const { className } = e.target
-    setEditing({...editing, [className]: true})
+    if (preview === false) { setEditing({...editing, [className]: true}) }
   }
 
   return (

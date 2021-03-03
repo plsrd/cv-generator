@@ -48,6 +48,7 @@ const WorkSection = (props) => {
       key={experience.id} 
       experiences={experiences} 
       setExperiences={setExperiences}
+      preview={preview}
       />
   )
   

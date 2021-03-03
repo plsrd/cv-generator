@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import uniqid from 'uniqid'
+
 import Reference from './Reference'
 import ReferenceForm from './ReferenceForm'
 
@@ -17,7 +19,15 @@ const ReferenceSection = (props) => {
     phone: ''
   }) 
 
-  const allReferences = references.map(reference => <Reference data={reference} />)
+  const allReferences = references.map(reference => 
+    <Reference 
+      reference={reference} 
+      key={uniqid()}
+      references={references}
+      setReferences={setReferences}
+      preview={preview}
+    />
+  )
 
   const handleSubmit = (e) => {
     e.preventDefault()
