@@ -17,6 +17,14 @@ button {
   border: none;
 }
 
+
+input {
+  font-family: 'IBM Plex Mono', monospace;
+  font-style: italic;
+  border: none;
+  outline: 2px solid #b7e4f8;
+}
+
 ::placeholder {
   color: black;
   opacity: 1;
@@ -42,7 +50,7 @@ button {
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: 860px;
   border-left: 1px solid black;
   border-right: 1px solid black;
   height: 100vh;

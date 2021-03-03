@@ -4,6 +4,11 @@
   flex-direction: row;
   border-bottom: 1px solid black;
   padding-bottom: 2em;
+  box-sizing: border-box;
+}
+
+.no-preview {
+  min-height:150px;
 }
 
 .skill-section .header {
@@ -11,15 +16,30 @@
   flex-basis: 225px;
 }
 
-.skill-section input {
-  width: 200px;
-}
-
-.hidden {
+.skill-section label {
   display: none;
 }
 
-.skill-container {
+.skill-section input {
+  width: 200px;
+  font-size: 1em;
+  margin-right: 1em;
+  padding-left: .3em;
+}
+
+.skill-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+}
+
+.skill-form button {
+  align-self: center;
+  font-size: 1.2em;
+  padding: .1em .5em .2em .5em;
+}
+
+.skill-container-no-preview {
   width: 500px;
   display: flex;
   flex-flow: row wrap;
@@ -27,22 +47,27 @@
   flex-grow: 2;
 }
 
+.skill-container {
+  margin-top: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
 .skill {
   background-color: #b7e4f8;
   color: #265d77;
   font-weight: bold;
   border-radius: 1em;
-  margin: .5em;
-  padding: 1em;
+  margin: .5em .5em .5em 0;
+  padding: .7em;
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 25px;
 }
 
-.skill:hover {
+.skill-no-preview:hover {
   background-color: #b1bbc0;
 }
 
-.skill:first-of-type {
-  margin-left: 0;
-}

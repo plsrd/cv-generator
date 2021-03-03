@@ -14,8 +14,8 @@ const SkillForm= (props) => {
     <form 
       onSubmit={handleSubmit} 
       ref={node}
+      className='skill-form'
     >
-      <button type='submit'>X</button>
       <label>{label}</label>
       <input 
         name={name} 
@@ -24,7 +24,7 @@ const SkillForm= (props) => {
         placeholder='something useful...'
         maxLength='30'
       />
-      <button type='submit'>Create</button>
+      <button type='submit'>+</button>
     </form>
   )
 }

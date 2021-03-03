@@ -22,7 +22,10 @@ const App = () => {
       <SkillSection preview={preview}/>
       <WorkSection preview={preview} />
       <ReferenceSection preview={preview} />
-      <button onClick={handleClick} className='header-button'>{preview ? 'Edit' : 'Preview'}</button>
+      <div>
+        <button onClick={handleClick} className='preview-button'>{preview ? 'Edit' : 'Preview'}</button>
+        {preview ? <button className='save-button'>Save</button> : null}
+      </div>
     </div>
   )
 }
