@@ -61,3 +61,16 @@ input {
 .empty {
   border: 1px solid red
 }
+
+.btn-container {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  justify-content: space-around;
+}
+
+.main-button {
+  font-size: 1.3em;
+  padding: .3em .5em;
+}
