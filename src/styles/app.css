@@ -22,7 +22,8 @@ input {
   font-family: 'IBM Plex Mono', monospace;
   font-style: italic;
   border: none;
-  outline: 2px solid #b7e4f8;
+  border: 1px solid grey;
+  border-radius: .2em;
 }
 
 ::placeholder {

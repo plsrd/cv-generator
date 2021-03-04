@@ -22,7 +22,7 @@ const WorkForm = (props) => {
 
   return (
     <form  onSubmit={handleSubmit} ref={node} className='work-form'>
-      <button onClick={handleSubmit}>X</button>
+      <button onClick={handleSubmit} className='cancel-button'>X</button>
       <label>Organization</label>
       <input 
         name='organization' 
@@ -49,6 +49,7 @@ const WorkForm = (props) => {
             name='from'
             value={from}
             onChange={handleChange}
+            className='date-input'
             required
           />
         </div>
@@ -59,6 +60,7 @@ const WorkForm = (props) => {
             name='to'
             value={to}
             onChange={handleChange}
+            className='date-input'
             required
           />
         </div>
@@ -72,7 +74,7 @@ const WorkForm = (props) => {
           rows={5}
           required
         />
-      <button type='submit'>Create</button>
+      <button type='submit' className='create-work-btn'>Create</button>
     </form>
   )
 }

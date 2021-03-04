@@ -67,7 +67,9 @@ const WorkSection = (props) => {
                       /> : null }
           { editing ? null : <button onClick={handleClick} className='header-button'>+</button> }
         </div>
-        {allWork}
+        <div className='work-container'>
+            {allWork}
+        </div>
       </div>
     )
   } else {
@@ -75,7 +77,9 @@ const WorkSection = (props) => {
       <div className={'work-section'}>
         <div className='header'>
           <h2 className='header-text'>Work Experience</h2>
-          {allWork}
+          <div className='work-container'>
+            {allWork}
+          </div>
         </div>
       </div>
     )

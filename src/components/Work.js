@@ -35,19 +35,36 @@ const Work = (props) => {
     setEditing({...editing, [name]: false})
   }
 
+
   const createInput = (key) =>  {
-    return (
-      <form onSubmit={handleSubmit}>
-        <label>{key}</label>
-        <input 
-          type={(key !== 'to' && key !== 'from') ? 'text' : 'date'}
-          name={key}
-          value={editedExperience[key]}
-          onChange={handleChange} 
-        /> 
-        <button>Update!</button>
-      </form>
-    )
+    if(key === 'description') {
+      return (
+        <form onSubmit={handleSubmit} className='edit-input'>
+          <label>{key}</label>
+          <textarea 
+            name={key}
+            value={editedExperience[key]}
+            onChange={handleChange}
+            className={`${key}-input`}
+          /> 
+          <button>Update</button>
+        </form>
+      )
+    } else {
+      return (
+        <form onSubmit={handleSubmit} className='edit-input'>
+          <label>{key}</label>
+          <input 
+            type={(key === 'to'||key === 'from') ? 'date' : 'text'}
+            name={key}
+            value={editedExperience[key]}
+            onChange={handleChange}
+            className={`${key}-input`}
+          /> 
+          <button>{(key === 'to'||key === 'from') ? '+' : 'Update'}</button>
+        </form>
+      )
+    }
   }
 
   const handleClick = (e) => {
