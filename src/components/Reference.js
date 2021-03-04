@@ -39,15 +39,16 @@ const Reference = (props) => {
 
   const createInput = (key) =>  {
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='reference-edit-form'>
         <label>{key}</label>
         <input 
           type={(key !== 'to' && key !== 'from') ? 'text' : 'date'}
           name={key}
           value={editedReference[key]}
-          onChange={handleChange} 
+          onChange={handleChange}
+          className={`edit-${key}`}
         /> 
-        <button>Update!</button>
+        <button>Update</button>
       </form>
     )
   }

@@ -19,15 +19,19 @@
 
 .reference-form label {
   font-weight: bold;
-  margin-top: 1em;
+  margin: 1em 0 .5em 0;
 }
 
 .reference-form button {
   margin-left: 0;
+  align-self: center;
+  margin-top: 1em;
+  font-size: 1em;
+  width: 150px;
 }
 
 .reference-form input {
-  width: 205px;
+  font-size: 1em;
 }
 
 .reference-container {
@@ -37,6 +41,7 @@
 .reference-name {
   font-weight: bold;
   font-size: 1.3em;
+  margin-bottom: .3em;
 }
 .reference-email {
   font-style: italic;
@@ -45,4 +50,37 @@
 
 .reference {
   margin: 1em 0;
+}
+
+.reference-edit-form label {
+  display: none;
+}
+
+.reference-edit-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.reference-edit-form button  {
+  height: 22px;
+}
+
+.reference-edit-form input {
+  margin-right: .5em;
+}
+
+.edit-name {
+  font-size: 1.2em;
+  height: 18px;
+}
+
+.edit-relationship, .edit-email, .edit-phone {
+  font-size: 1em;
+  height: 14px;
+}
+
+.edit-email  {
+  margin: .5em 0;
+  width: 250px;
 }

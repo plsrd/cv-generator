@@ -63,15 +63,19 @@ const ReferenceSection = (props) => {
                         /> : null }
           { editing ? null : <button onClick={handleClick} className='header-button'>+</button> }
         </div>
-        {allReferences}
+        <div className='reference-container'>
+          {allReferences}
+        </div>
       </div>
     )
   } else {
     return (
-      <div className='Reference Section'>
+      <div className='reference-section'>
         <div className='header'>
           <h2 className='header-text'>References</h2>
-          {allReferences}
+          <div className='reference-container'>
+            {allReferences}
+          </div>
         </div>
       </div>
     )
